@@ -49,4 +49,15 @@
         reveals[i].classList.add("active");
       }
     }
-  }
+  };
+//javascript fo custom validation
+document.getElementById('email').addEventListener('submit', function(event) {
+    const emailInput = document.getElementById('email');
+    const emailValue = emailInput.value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(emailValue)) {
+        alert('Enter a valid email address in the format test@test.com');
+        event.preventDefault();
+    }
+});
